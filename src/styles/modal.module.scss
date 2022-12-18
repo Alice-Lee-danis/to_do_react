@@ -1,0 +1,47 @@
+.contextModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(245, 243, 187, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+        background-color: rgb(51, 51, 51);
+        border-radius: 30px;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: clamp(2px, 2vw + 5px ,20px);;
+        padding: 40px;
+        position: relative;
+        height: clamp(100px, 3vw + 200px, 500px);
+        width: clamp(100px, 25vw + 200px, 600px);
+        font-size: clamp(10px, 2vw + 5px, 30px);
+        .notesInput {
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 20px;
+            outline: none;
+            width: 100%;
+            height: clamp(3px, 1vw + 30px, 100px);
+            padding: 0 20px;
+            color: white;
+        }
+        .saveNoteContext {
+            display: flex;
+            justify-content: flex-end;
+            .saveNote {
+                padding: 7px 20px;
+                background: linear-gradient(50deg, rgba(150,251,196,1) 25%, rgba(249,245,134,1) 56%);
+                border-radius: 20px;
+                border: 0;
+                font-size: clamp(3px, 0.5vw + 10px, 30px);
+        }
+        }
+        
+    }
+}

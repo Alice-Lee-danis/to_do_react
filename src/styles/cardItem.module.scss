@@ -1,0 +1,63 @@
+.cardItem {
+    width: 100%;
+    padding: 2vh 40px;
+    background-color: rgb(50,53,60);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4vw;
+    font-size: clamp(5px, 1.5vw + 2px, 120px);
+    .infoCard {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+        .title {
+            display: flex;
+            column-gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: 0.5vw;
+            .isActive {
+                background-color: rgb(79, 79, 79);
+                font-size: clamp(5px, 0.7vw + 4px , 120px);
+                width: clamp(30px, 4vw + 30px , 120px);
+                height: clamp(5px, 2vw + 9px , 120px);
+                padding-left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: calc(2px + 0.4vw);
+                    height: calc(2px + 0.4vw);
+                    background-color: rgb(163, 163, 163);
+                    left: 9px;
+                    border-radius: 50%;
+                    top: 50%;
+                    transform: translate(0,-50%);
+                }
+            }
+        }
+    }
+    .activeTaskButton{
+        font-size: clamp(5px, 0.3vw + 4px , 120px);
+        width: clamp(5px, 11vw + 50px , 120px);
+        height: clamp(5px, 1.5vw + 20px , 120px);
+        color: rgb(163, 163, 163);
+        background-color: rgb(79, 79, 79);
+        border-radius: 20px;
+        border: 0;
+        margin-top: 5px;
+        cursor: pointer;
+        &:hover{
+            background: linear-gradient(50deg, rgb(176, 238, 204) 40%, rgb(233, 231, 172) 56%);
+        }
+    }
+    p {
+        font-size: clamp(5px, 1vw + 6px , 120px);
+    }
+}

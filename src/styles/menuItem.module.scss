@@ -1,0 +1,17 @@
+.a{
+    width:  clamp(32px, 40px + 0.5vw, 60px);
+    height:  clamp(32px, 40px + 0.5vw, 60px);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2px;
+    .close {
+        position: relative;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+}
+

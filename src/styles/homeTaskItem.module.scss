@@ -1,0 +1,72 @@
+.taskItem {
+    width: 100%;
+    padding: 2vh 40px;
+    background-color: rgb(50,53,60);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4vw;
+    row-gap: 0.5vh;
+    font-size: clamp(5px, 1vw + 6px, 120px);
+    p {
+        font-size: clamp(3px, 1vw + 8px ,120px);
+    }
+    .link {
+        font-size: clamp(3px, 1vw + 4px ,120px);
+        color: rgb(59, 251, 146);
+        text-decoration: none;
+        position: relative;
+        max-width: 90px;
+        text-align: end;
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: 0;
+            height: 5px;
+            background-color: rgb(59, 251, 146);
+            transition: 500ms;
+            border-radius: 3px;
+        }
+        &:hover {
+            &::after{
+                content: 0;
+                width: 100%;
+                height: 5px;
+                background-color: rgb(59, 251, 146);
+            }
+        }
+        
+    } 
+    .endTaskContext {
+        .endTaskButton {
+            background-color: transparent;
+                border: 0;
+                font-size: clamp(10px, 1vw + 10px ,120px);
+                color: rgb(59, 251, 146);
+                cursor: pointer;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    bottom: -5px;
+                    width: 0;
+                    height: 5px;
+                    background-color: rgb(59, 251, 146);
+                    transition: 500ms;
+                    border-radius: 3px;
+                }
+                &:hover {
+                    &::after{
+                        content: 0;
+                        width: 100%;
+                        height: 5px;
+                        background-color: rgb(59, 251, 146);
+                    }
+                }
+        }
+    }
+}
